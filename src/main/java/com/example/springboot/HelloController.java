@@ -44,9 +44,10 @@ public class HelloController {
         return map;
     }
     @RequestMapping(value = "info", method = RequestMethod.GET)
-    public @ResponseBody Object info(String name){
+    public @ResponseBody Object info(String name, String pwd){
         List<String> userList1 = new ArrayList<>();
         userList1.add(name);
+        userList1.add(pwd);
         userList1.add(name.length()+"");
         System.out.println("info api is get");
         return userList1;
